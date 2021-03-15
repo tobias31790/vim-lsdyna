@@ -49,6 +49,7 @@ function! lsdyna_manual#Manual(arg1)
 "    if has("win32") || has("win64")
 "      let file = substitute(file,'/','\','g')
       let cmd = ':! zathura '.file.' -P '.page
+"      let cmd = ':! okular '.file.' -p '.page
       silent execute cmd
 "    endif
   else
