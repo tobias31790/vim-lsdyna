@@ -46,11 +46,11 @@ function! lsdyna_manual#Manual(arg1)
   endfor
 
   if page
-    if has("win32") || has("win64")
-      let file = substitute(file,'/','\','g')
-      let cmd = '!start /B '. g:lsdynaPathAcrobat.' /A page='.page.' '.file
+"    if has("win32") || has("win64")
+"      let file = substitute(file,'/','\','g')
+      let cmd = ':! zathura '.file.' -P '.page
       silent execute cmd
-    endif
+"    endif
   else
     echo "No manual found for ".kword
   endif

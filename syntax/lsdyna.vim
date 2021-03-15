@@ -42,23 +42,23 @@ highlight default link lsdynaTitle lsdynaTitle
 "    Standard Ls-Dyna keyword
 "-------------------------------------------------------------------------------
 
-syntax match lsdynaKeyword_02_Col '\%11c.\{10}' contained
-syntax match lsdynaKeyword_04_Col '\%31c.\{10}' contained
-syntax match lsdynaKeyword_06_Col '\%51c.\{10}' contained
-syntax match lsdynaKeyword_08_Col '\%71c.\{10}' contained
+"syntax match lsdynaKeyword_02_Col '\%11c.\{10}' contained
+"syntax match lsdynaKeyword_04_Col '\%31c.\{10}' contained
+"syntax match lsdynaKeyword_06_Col '\%51c.\{10}' contained
+"syntax match lsdynaKeyword_08_Col '\%71c.\{10}' contained
 
-highlight default link lsdynaKeyword_02_Col lsdynaColumn
-highlight default link lsdynaKeyword_04_Col lsdynaColumn
-highlight default link lsdynaKeyword_06_Col lsdynaColumn
-highlight default link lsdynaKeyword_08_Col lsdynaColumn
+"highlight default link lsdynaKeyword_02_Col lsdynaColumn
+"highlight default link lsdynaKeyword_04_Col lsdynaColumn
+"highlight default link lsdynaKeyword_06_Col lsdynaColumn
+"highlight default link lsdynaKeyword_08_Col lsdynaColumn
 
 syntax cluster lsdynaKeywordCluster add=lsdynaComment
 syntax cluster lsdynaKeywordCluster add=lsdynaKeywordName
 syntax cluster lsdynaKeywordCluster add=lsdynaTitle
-syntax cluster lsdynaKeywordCluster add=lsdynaKeyword_02_Col
-syntax cluster lsdynaKeywordCluster add=lsdynaKeyword_04_Col
-syntax cluster lsdynaKeywordCluster add=lsdynaKeyword_06_Col
-syntax cluster lsdynaKeywordCluster add=lsdynaKeyword_08_Col
+"syntax cluster lsdynaKeywordCluster add=lsdynaKeyword_02_Col
+"syntax cluster lsdynaKeywordCluster add=lsdynaKeyword_04_Col
+"syntax cluster lsdynaKeywordCluster add=lsdynaKeyword_06_Col
+"syntax cluster lsdynaKeywordCluster add=lsdynaKeyword_08_Col
 
 syntax region lsdynaKeywordReg start=/^\*\a/ end=/^\*/me=s-1
  \ contains=@lsdynaKeywordCluster
@@ -67,19 +67,19 @@ syntax region lsdynaKeywordReg start=/^\*\a/ end=/^\*/me=s-1
 "    Nodes
 "-------------------------------------------------------------------------------
 
-syntax match lsdynaNode_02_Col '\%9c.\{16}'  contained
-syntax match lsdynaNode_04_Col '\%41c.\{16}' contained
-syntax match lsdynaNode_06_Col '\%65c.\{8}'  contained
+"syntax match lsdynaNode_02_Col '\%9c.\{16}'  contained
+"syntax match lsdynaNode_04_Col '\%41c.\{16}' contained
+"syntax match lsdynaNode_06_Col '\%65c.\{8}'  contained
 
-highlight default link lsdynaNode_02_Col lsdynaColumn
-highlight default link lsdynaNode_04_Col lsdynaColumn
-highlight default link lsdynaNode_06_Col lsdynaColumn
+"highlight default link lsdynaNode_02_Col lsdynaColumn
+"highlight default link lsdynaNode_04_Col lsdynaColumn
+"highlight default link lsdynaNode_06_Col lsdynaColumn
 
 syntax cluster lsdynaNodeCluster add=lsdynaComment
 syntax cluster lsdynaNodeCluster add=lsdynaKeywordName
-syntax cluster lsdynaNodeCluster add=lsdynaNode_02_Col
-syntax cluster lsdynaNodeCluster add=lsdynaNode_04_Col
-syntax cluster lsdynaNodeCluster add=lsdynaNode_06_Col
+"syntax cluster lsdynaNodeCluster add=lsdynaNode_02_Col
+"syntax cluster lsdynaNodeCluster add=lsdynaNode_04_Col
+"syntax cluster lsdynaNodeCluster add=lsdynaNode_06_Col
 
 syntax region lsdynaNodeReg start=/\c^\*NODE *$/ end=/^\*/me=s-1
  \ contains=@lsdynaNodeCluster
@@ -90,25 +90,25 @@ syntax region lsdynaAirbagRefReg start=/\c^\*AIRBAG_REF.*$/ end=/^\*/me=s-1
 "    Elements
 "-------------------------------------------------------------------------------
 
-syntax match lsdynaElem_02_Col '\%9c.\{8}'  contained
-syntax match lsdynaElem_04_Col '\%25c.\{8}' contained
-syntax match lsdynaElem_06_Col '\%41c.\{8}' contained
-syntax match lsdynaElem_08_Col '\%57c.\{8}' contained
-syntax match lsdynaElem_10_Col '\%73c.\{8}' contained
+"syntax match lsdynaElem_02_Col '\%9c.\{8}'  contained
+"syntax match lsdynaElem_04_Col '\%25c.\{8}' contained
+"syntax match lsdynaElem_06_Col '\%41c.\{8}' contained
+"syntax match lsdynaElem_08_Col '\%57c.\{8}' contained
+"syntax match lsdynaElem_10_Col '\%73c.\{8}' contained
 
-highlight default link lsdynaElem_02_Col lsdynaColumn
-highlight default link lsdynaElem_04_Col lsdynaColumn
-highlight default link lsdynaElem_06_Col lsdynaColumn
-highlight default link lsdynaElem_08_Col lsdynaColumn
-highlight default link lsdynaElem_10_Col lsdynaColumn
+"highlight default link lsdynaElem_02_Col lsdynaColumn
+"highlight default link lsdynaElem_04_Col lsdynaColumn
+"highlight default link lsdynaElem_06_Col lsdynaColumn
+"highlight default link lsdynaElem_08_Col lsdynaColumn
+"highlight default link lsdynaElem_10_Col lsdynaColumn
 
 syntax cluster lsdynaElemCluster add=lsdynaComment
 syntax cluster lsdynaElemCluster add=lsdynaKeywordName
-syntax cluster lsdynaElemCluster add=lsdynaElem_02_Col
-syntax cluster lsdynaElemCluster add=lsdynaElem_04_Col
-syntax cluster lsdynaElemCluster add=lsdynaElem_06_Col
-syntax cluster lsdynaElemCluster add=lsdynaElem_08_Col
-syntax cluster lsdynaElemCluster add=lsdynaElem_10_Col
+"syntax cluster lsdynaElemCluster add=lsdynaElem_02_Col
+"syntax cluster lsdynaElemCluster add=lsdynaElem_04_Col
+"syntax cluster lsdynaElemCluster add=lsdynaElem_06_Col
+"syntax cluster lsdynaElemCluster add=lsdynaElem_08_Col
+"syntax cluster lsdynaElemCluster add=lsdynaElem_10_Col
 
 syntax region lsdynaElemReg start=/\c^\*ELEMENT_.*$/ end=/^\*/me=s-1
  \ contains=@lsdynaElemCluster

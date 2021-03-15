@@ -169,7 +169,7 @@ augroup END
 " change 4 -> '$' sign at the line beginning
 inoreabbrev 4 <C-R>=(col('.')==1 ? '$' : 4)<CR>
 " comment/uncomment line
-noremap <silent><buffer> <M-c> :call lsdyna_misc#CommentLine()<CR>j
+noremap <silent><buffer> <C-c> :call lsdyna_misc#CommentLine()<CR>j
 " put empty comment line below
 nnoremap <silent><buffer> <LocalLeader>c o$<ESC>0
 " put empty comment line above
@@ -386,8 +386,8 @@ if !exists("g:complete_type")      | let g:complete_type      = 'none'          
 " set omni completion functions
 setlocal omnifunc=lsdyna_complete#Omnifunc
 " completion mappings
-inoremap <C-Tab> <ESC>:<C-u>call lsdyna_complete#OmnifunctPre()<CR>a<C-x><C-o>
-nnoremap <C-Tab> :<C-u>call lsdyna_complete#OmnifunctPre()<CR>:<C-u>call lsdyna_complete#extendLine()<CR>R<C-x><C-o>
+inoremap <C-b> <ESC>:<C-u>call lsdyna_complete#OmnifunctPre()<CR>a<C-x><C-o>
+nnoremap <C-b> :<C-u>call lsdyna_complete#OmnifunctPre()<CR>:<C-u>call lsdyna_complete#extendLine()<CR>R<C-x><C-o>
 inoremap <buffer><silent><expr> <CR>     lsdyna_complete#MapEnter()
 inoremap <buffer><silent><expr> <kEnter> lsdyna_complete#MapEnter()
 
